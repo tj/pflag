@@ -489,9 +489,9 @@ func (f *FlagSet) FlagUsages() string {
 
 		line := ""
 		if len(flag.Shorthand) > 0 && len(flag.ShorthandDeprecated) == 0 {
-			line = fmt.Sprintf("  -%s, --%s", flag.Shorthand, flag.Name)
+			line = fmt.Sprintf("    -%s, --%s", flag.Shorthand, flag.Name)
 		} else {
-			line = fmt.Sprintf("      --%s", flag.Name)
+			line = fmt.Sprintf("        --%s", flag.Name)
 		}
 
 		varname, usage := UnquoteUsage(flag)
